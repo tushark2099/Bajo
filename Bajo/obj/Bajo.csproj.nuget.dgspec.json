@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Tushar\\Bajo\\Bajo\\Bajo\\Bajo.csproj": {}
+    "D:\\Projects\\Bajo\\Bajo\\Bajo.csproj": {}
   },
   "projects": {
-    "D:\\Tushar\\Bajo\\Bajo\\Bajo\\Bajo.csproj": {
+    "D:\\Projects\\Bajo\\Bajo\\Bajo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Tushar\\Bajo\\Bajo\\Bajo\\Bajo.csproj",
+        "projectUniqueName": "D:\\Projects\\Bajo\\Bajo\\Bajo.csproj",
         "projectName": "Bajo",
-        "projectPath": "D:\\Tushar\\Bajo\\Bajo\\Bajo\\Bajo.csproj",
-        "packagesPath": "C:\\Users\\tusha\\.nuget\\packages\\",
-        "outputPath": "D:\\Tushar\\Bajo\\Bajo\\Bajo\\obj\\",
+        "projectPath": "D:\\Projects\\Bajo\\Bajo\\Bajo.csproj",
+        "packagesPath": "C:\\Users\\CS2082TX\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Bajo\\Bajo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tusha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\CS2082TX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -64,6 +62,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.3, )"
             }
           },
           "imports": [
@@ -84,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200-preview-015002\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
