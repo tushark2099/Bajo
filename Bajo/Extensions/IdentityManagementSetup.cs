@@ -23,6 +23,12 @@ namespace Bajo.Extensions
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
 
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                options.LoginPath = "/Identity/Account/Login";
+            });
+
             //services.AddAuthentication().AddCookie(options =>
             //{
             //    options.LoginPath = "/Identity/Pages/Login";
