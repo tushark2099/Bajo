@@ -13,6 +13,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Bajo.Extensions;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Bajo
 {
@@ -31,9 +33,10 @@ namespace Bajo
         {
             services.AddDatabaseContext(_configuration);
 
-            services.AddIdentityAuthentication(_configuration);
+            services.AddIdentityAuthentication();
 
             services.AddRazorPages();
+            services.AddIdentityAuthorization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,7 +64,7 @@ namespace Bajo
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapRazorPages();//.RequireAuthorization();
             });
         }
     }
