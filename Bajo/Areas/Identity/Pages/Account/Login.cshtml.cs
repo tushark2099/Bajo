@@ -84,7 +84,12 @@ namespace Bajo.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
+                    if (Url.IsLocalUrl(returnUrl))
+                    {
+                        return LocalRedirect(returnUrl);
+                    }
+                    ModelState.AddModelError(string.Empty, "Return url is invalid.");
+                    return Page();
                 }
                 if (result.RequiresTwoFactor)
                 {
