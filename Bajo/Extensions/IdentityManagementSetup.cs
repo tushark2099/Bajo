@@ -1,5 +1,6 @@
 ﻿using Bajo.Areas.Identity.Data.Models;
 using Bajo.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +13,7 @@ namespace Bajo.Extensions
 {
     public static class IdentityManagementSetup
     {
-        public static void AddIdentityAuthentication(this IServiceCollection services, IConfiguration configuration)
+        public static void AddIdentityAuthentication(this IServiceCollection services)//, IConfiguration configuration)
         {
             if (services == null) throw new ArgumentNullException(nameof(services));
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -22,7 +23,11 @@ namespace Bajo.Extensions
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
 
-            //services.AddAuthentication()
+            //services.AddAuthentication().AddCookie(options =>
+            //{
+            //    options.LoginPath = "/Identity/Pages/Login";
+            //    options.LogoutPath = "/logout";
+            //});
             //.AddGoogle(googleOptions =>
             //{
             //    googleOptions.ClientId = configuration["Authentication:Google:ClientId"];
@@ -33,6 +38,17 @@ namespace Bajo.Extensions
             //    facebookOptions.AppId = configuration["Authentication:Facebook:AppId"];
             //    facebookOptions.AppSecret = configuration["Authentication:Facebook:AppSecret"];
             //});
+        }
+
+        public static void AddIdentityAuthorization(this IServiceCollection services)
+        {
+            if (services == null) throw new ArgumentNullException(nameof(services));
+            services.AddAuthorization(options =>
+            {
+                options.FallbackPolicy = new AuthorizationPolicyBuilder()
+                                        .RequireAuthenticatedUser()
+                                        .Build();
+            });
         }
     }
 }
