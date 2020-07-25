@@ -33,8 +33,15 @@ using Bajo.Data;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "D:\Projects\Bajo\Bajo\Pages\_ViewImports.cshtml"
+using Bajo.Areas.Identity.Data.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Pages/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"82ff4677882f86194120a4bfd2e584f5018c0142", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4102db448c3b5726c721195b9337ebb57b183c47", @"/Pages/_ViewImports.cshtml")]
     public class Pages__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
