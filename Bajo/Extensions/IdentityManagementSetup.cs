@@ -16,8 +16,7 @@ namespace Bajo.Extensions
             if (services == null) throw new ArgumentNullException(nameof(services));
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
-                options.Password.RequiredLength = 10;
-                options.SignIn.RequireConfirmedEmail = true;
+                options.Password.RequiredLength = 8;
             })
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
